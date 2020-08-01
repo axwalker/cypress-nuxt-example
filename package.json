@@ -1,0 +1,24 @@
+{
+  "name": "test-cypress-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "serve:static": "nuxt build && http-server dist -p 3000",
+    "generate": "nuxt generate",
+    "cy:open": "cypress open",
+    "test:e2e:build": "start-server-and-test serve:static http://localhost:3000 cy:open",
+    "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open"
+  },
+  "dependencies": {
+    "nuxt": "^2.14.0",
+    "zxcvbn": "^4.4.2"
+  },
+  "devDependencies": {
+    "cypress": "^4.11.0",
+    "http-server": "^0.12.3",
+    "start-server-and-test": "^1.11.2"
+  }
+}
